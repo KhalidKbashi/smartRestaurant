@@ -7,36 +7,28 @@ import com.alkbashi.smartrestaurant.demo.services.mealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
-@RestController
-@RequestMapping(path = "")
-public class mealsController
+@Controller
+@RequestMapping(path = "/customer")
+public class customerController
 {
+    //SERVICES
     private mealService mealService;
+
+    //ASSEMBLERS
     private mealAssembler mealAssembler;
 
     @Autowired
-    public mealsController(mealService mealService, mealAssembler mealAssembler)
+    public customerController(mealService mealService, mealAssembler mealAssembler)
     {
         this.mealService = mealService;
         this.mealAssembler = mealAssembler;
-    }
-
-    //GET
-    @GetMapping(path = "/{id}")
-    @ResponseStatus(code = HttpStatus.OK)
-    public mealModel getMealByIdRequest(@PathVariable(name = "id") String id)
-    {
-        meal meal = this.mealService.get(id);
-
-        if(Objects.isNull(meal))
-            System.out.println("an exception in meals controller class");
-
-        return this.mealAssembler.toModel(meal);
     }
 
     //GET-ALL
@@ -51,10 +43,4 @@ public class mealsController
 
         return this.mealAssembler.toCollectionModel(meals);
     }
-
-    // POST
-
-    //DELETE
-    //PUT
-    //PATCH
 }

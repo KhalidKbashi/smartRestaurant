@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -36,9 +35,9 @@ public class mealService implements servicesTemplate<meal>
     }
 
     @Override
-    public void add(meal obj)
+    public String add(meal obj)
     {
-        this.mealsRepo.save(obj);
+        return this.mealsRepo.save(obj).getId();
     }
 
     @Override
@@ -48,23 +47,23 @@ public class mealService implements servicesTemplate<meal>
     }
 
     @Override
-    public void patchEdit(String id, meal newOne)
+    public void patchEdit(String id, meal newMeal)
     {
         Optional<meal> original = this.mealsRepo.findById(id);
         if(original.isPresent())
         {
-            if(!newOne.getName().isBlank());
-                original.get().setName(newOne.getName());
-            if(newOne.getPrice()!=0)
-                original.get().setPrice(newOne.getPrice());
-            if(!Objects.isNull(newOne.getType()))
-                original.get().setType(newOne.getType());
-            if(!(newOne.getDetails().capacity()==0))
-                original.get().setDetails(newOne.getDetails());
-            if(newOne.isAvailable())
-                original.get().setAvailable(newOne.isAvailable());
-            if(newOne.getAddOnsList().isEmpty())
-                original.get().setAddOnsList(newOne.getAddOnsList());
+            if(!newMeal.getName().isBlank());
+                original.get().setName(newMeal.getName());
+            if(newMeal.getPrice()!=0)
+                original.get().setPrice(newMeal.getPrice());
+            if(!Objects.isNull(newMeal.getType()))
+                original.get().setType(newMeal.getType());
+            if(!(newMeal.getDetails().capacity()==0))
+                original.get().setDetails(newMeal.getDetails());
+            if(newMeal.isAvailable())
+                original.get().setAvailable(newMeal.isAvailable());
+            if(newMeal.getAddOnsList().isEmpty())
+                original.get().setAddOnsList(newMeal.getAddOnsList());
 
             this.mealsRepo.deleteById(id);
             this.mealsRepo.save(original.get());
