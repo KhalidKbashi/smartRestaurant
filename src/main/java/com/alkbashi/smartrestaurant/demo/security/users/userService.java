@@ -7,6 +7,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @Service
 @AllArgsConstructor
 public class userService implements UserDetailsService
@@ -39,8 +41,12 @@ public class userService implements UserDetailsService
     public void enableUser(String username)
     {
         user user = this.userRepo.findByUsername(username).get();
+
         this.userRepo.delete(user);
+
         user.setEnabled(true);
+        user.setEnabledAt(LocalDateTime.now());
+        
         this.addUser(user);
     }
 }

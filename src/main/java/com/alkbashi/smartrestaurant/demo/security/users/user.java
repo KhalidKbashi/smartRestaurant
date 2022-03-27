@@ -11,6 +11,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Collections;
 
@@ -44,6 +45,7 @@ public class user implements UserDetails
     private String email;
     private String password;
     private usersRole usersRoles;
+    private LocalDateTime enabledAt;
     private boolean locked = false;
     private boolean enabled = false;
 

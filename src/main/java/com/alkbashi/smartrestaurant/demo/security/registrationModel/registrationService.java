@@ -37,7 +37,7 @@ public class registrationService
             throw new IllegalStateException("TOKEN ALREADY USED");
 
         this.userService.enableUser(tokens.getUser().getUsername());
-        this.tokensService.setConformedAt(tokens.getToken());
+        this.tokensService.setCreatedAt(tokens.getToken());
 
     }
 }

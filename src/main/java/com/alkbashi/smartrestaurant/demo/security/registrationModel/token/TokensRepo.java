@@ -11,6 +11,7 @@ import java.util.Optional;
 public interface TokensRepo extends MongoRepository<Tokens,String>
 {
     Optional<Tokens> findByToken(String token);
+    Boolean deleteByToken(String token);
 
     /*@Query("UPDATE Tokens c SET c.confirmedAt = ?2 WHERE c.token = ?1")
     void setConformedAt(String token, LocalDateTime confirmedAt);*/

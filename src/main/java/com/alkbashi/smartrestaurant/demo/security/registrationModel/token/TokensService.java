@@ -21,11 +21,16 @@ public class TokensService
         return this.tokensRepo.findByToken(token).orElseThrow(() -> new IllegalStateException("Token Not Found"));
     }
 
-    public void setConformedAt(String token)
+    public void setCreatedAt(String token)
     {
         Tokens tokens = this.tokensRepo.findByToken(token).get();
         this.tokensRepo.delete(tokens);
         tokens.setConformedAt();
         this.addToken(tokens);
+
+        /*
+        MOVE METHOD NAME TO endToken
+        this.tokensRepo.deleteByToken(token);
+         */
     }
 }
