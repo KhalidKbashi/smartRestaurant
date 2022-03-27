@@ -4,6 +4,7 @@ import com.alkbashi.smartrestaurant.demo.security.registrationModel.registration
 import com.alkbashi.smartrestaurant.demo.security.roles.usersRole;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
@@ -15,6 +16,7 @@ import java.util.Collections;
 
 @Document
 @Data
+@NoArgsConstructor
 public class user implements UserDetails
 {
     public user(String username, String email, String password

@@ -19,10 +19,10 @@ import java.util.ArrayList;
 public class customerController
 {
     //SERVICES
-    private mealService mealService;
+    private final mealService mealService;
 
     //ASSEMBLERS
-    private mealAssembler mealAssembler;
+    private final mealAssembler mealAssembler;
 
     @Autowired
     public customerController(mealService mealService, mealAssembler mealAssembler)

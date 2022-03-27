@@ -4,10 +4,10 @@ import java.util.Collection;
 
 public interface servicesTemplate<T>
 {
-    public T get(String id);
-    public Collection<T> getAll();
-    public String add(T obj);
-    public void delete(String id);
-    public void patchEdit(String id,T obj);
-    public boolean check(String id);
+    T get(String id);
+    Collection<T> getAll();
+    String add(T obj);
+    void delete(String id);
+    void patchEdit(String id, T obj);
+    boolean check(String id);
 }

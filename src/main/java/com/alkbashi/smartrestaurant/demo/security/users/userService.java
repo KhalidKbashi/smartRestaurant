@@ -1,7 +1,6 @@
 package com.alkbashi.smartrestaurant.demo.security.users;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -12,8 +11,8 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class userService implements UserDetailsService
 {
-    private userRepo userRepo;
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final userRepo userRepo;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
@@ -24,12 +23,24 @@ public class userService implements UserDetailsService
 
     public void addUser(user user)
     {
-        System.out.println(user.getUsername());
-        if(this.userRepo.findByUsername(user.getUsername()).isPresent())
+        if(check(user))
             throw new IllegalStateException("user duplicate exception");
 
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
         this.userRepo.save(user);
+    }
+
+    public boolean check(user user)
+    {
+        return this.userRepo.existsByUsername(user.getUsername());
+    }
+
+    public void enableUser(String username)
+    {
+        user user = this.userRepo.findByUsername(username).get();
+        this.userRepo.delete(user);
+        user.setEnabled(true);
+        this.addUser(user);
     }
 }

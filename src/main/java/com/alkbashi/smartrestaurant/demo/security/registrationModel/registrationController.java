@@ -8,20 +8,30 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.Objects;
 
-@Controller
+@RestController
 @RequestMapping(path = "/register")
 @AllArgsConstructor
 public class registrationController
 {
-    private registrationService registrationService;
+    private final registrationService registrationService;
 
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
-    public void registerRequest(@Valid @RequestBody registrationDTO registrationDTO)
+    public String registerRequest(@Valid @RequestBody registrationDTO registrationDTO)
     {
         if(Objects.isNull(registrationDTO))
             throw new IllegalStateException("NO DATA");
 
-        this.registrationService.registerUser(registrationDTO);
+        return this.registrationService.registerUser(registrationDTO);
+    }
+
+    @ResponseStatus(code = HttpStatus.ACCEPTED)
+    @GetMapping("/activate")
+    public void validateTokenRequest(@RequestParam(name = "token") String token)
+    {
+        if(token.isBlank())
+            throw new IllegalStateException("NO TOKEN PASSED");
+
+        this.registrationService.validateToken(token);
     }
 }

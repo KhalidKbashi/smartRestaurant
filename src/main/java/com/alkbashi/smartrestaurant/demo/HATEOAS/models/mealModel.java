@@ -24,11 +24,11 @@ public class mealModel extends RepresentationModel<mealModel>
         this.createdAt = meal.getCreatedAt();
     }
 
-    private String name;
-    private double price;
-    private elementType type;
-    private StringBuffer details;
-    private boolean available;
-    private List<addOns> addOnsList;
+    private final String name;
+    private final double price;
+    private final elementType type;
+    private final StringBuffer details;
+    private final boolean available;
+    private final List<addOns> addOnsList;
     private final String createdAt;
 }

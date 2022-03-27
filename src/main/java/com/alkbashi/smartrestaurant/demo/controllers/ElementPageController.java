@@ -16,8 +16,8 @@ import java.util.Objects;
 @RequestMapping(path = "")
 public class ElementPageController
 {
-    private mealService mealService;
-    private mealAssembler mealAssembler;
+    private final mealService mealService;
+    private final mealAssembler mealAssembler;
 
     @Autowired
     public ElementPageController(mealService mealService, mealAssembler mealAssembler)
