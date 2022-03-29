@@ -9,8 +9,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
@@ -18,7 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class config extends WebSecurityConfigurerAdapter
 {
     private final userService userService;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final PasswordEncodingClass passwordEncodingClass;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception
@@ -31,7 +29,7 @@ public class config extends WebSecurityConfigurerAdapter
     {
         http.csrf().disable().authorizeRequests()
         .antMatchers("/register/**").permitAll()
-                .anyRequest().authenticated().and().formLogin();
+                .anyRequest().authenticated().and().httpBasic().and().formLogin();
     }
 
 
@@ -40,9 +38,11 @@ public class config extends WebSecurityConfigurerAdapter
     {
         DaoAuthenticationProvider daoAP = new DaoAuthenticationProvider();
 
-        daoAP.setPasswordEncoder(bCryptPasswordEncoder);
+        daoAP.setPasswordEncoder(passwordEncodingClass.passwordEncoder());
         daoAP.setUserDetailsService(userService);
 
         return daoAP;
     }
+
+
 }

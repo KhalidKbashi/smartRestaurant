@@ -25,7 +25,7 @@ public class mealService implements servicesTemplate<meal>
     @Override
     public meal get(String id)
     {
-        return this.mealsRepo.findById(id).orElse(null);
+        return this.mealsRepo.findById(id).orElseThrow(() -> new IllegalStateException("Meal not found"));
     }
 
     @Override

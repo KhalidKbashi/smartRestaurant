@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 @Data
-public class drinksAddOn implements addOns
+public class drinkAddOns implements addOns
 {
     @Id
     private String Id;

@@ -1,26 +1,34 @@
 package com.alkbashi.smartrestaurant.demo.security.users;
 
+import com.alkbashi.smartrestaurant.demo.security.PasswordEncodingClass;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
 public class userService implements UserDetailsService
 {
     private final userRepo userRepo;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final PasswordEncodingClass passwordEncodingClass;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
     {
-        return this.userRepo.findByUsername(username)
-                .orElseThrow(IllegalStateException::new);
+        Optional<user> user;
+        if(username.contains("@"))
+            user = this.userRepo.findByEmail(username);
+        else
+            user = this.userRepo.findByUsername(username);
+
+        if(user.isEmpty())
+            throw new IllegalStateException("USER NOT FOUND");
+        return user.get();
     }
 
     public void addUser(user user)
@@ -28,7 +36,7 @@ public class userService implements UserDetailsService
         if(check(user))
             throw new IllegalStateException("user duplicate exception");
 
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncodingClass.passwordEncoder().encode(user.getPassword()));
 
         this.userRepo.save(user);
     }

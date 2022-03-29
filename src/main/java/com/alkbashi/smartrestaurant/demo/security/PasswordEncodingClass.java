@@ -6,12 +6,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.security.SecureRandom;
+
 @Configuration
-public class passwordEncoding
+public class PasswordEncodingClass
 {
     @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder()
+    public PasswordEncoder passwordEncoder()
     {
-        return new BCryptPasswordEncoder();
+        return new BCryptPasswordEncoder(10,new SecureRandom());
     }
 }

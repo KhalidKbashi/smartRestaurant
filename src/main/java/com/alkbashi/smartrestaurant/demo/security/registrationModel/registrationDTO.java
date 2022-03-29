@@ -24,4 +24,19 @@ public class registrationDTO
     @NotBlank
     @Pattern(regexp = "[A-Za-z0-9]{4,16}")
     private String password;
+
+    public String getFirstName()
+    {
+        return firstName.toLowerCase();
+    }
+
+    public String getLastName()
+    {
+        return lastName.toLowerCase();
+    }
+
+    public String getEmail()
+    {
+        return email.toLowerCase();
+    }
 }

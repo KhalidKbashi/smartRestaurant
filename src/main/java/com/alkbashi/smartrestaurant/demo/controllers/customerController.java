@@ -11,10 +11,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 
-@Controller
+@RestController
 @RequestMapping(path = "/customer")
 public class customerController
 {
@@ -42,5 +43,13 @@ public class customerController
             System.out.println("an exception in meals controller class");
 
         return this.mealAssembler.toCollectionModel(meals);
+    }
+
+    //GET-ALL
+    @GetMapping(path = "/test")
+    @ResponseStatus(code = HttpStatus.OK)
+    public String test()
+    {
+        return "SUCCESS";
     }
 }

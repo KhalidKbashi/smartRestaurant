@@ -27,7 +27,7 @@ public class drinksService implements servicesTemplate<drinks>
     @Override
     public drinks get(String id)
     {
-        return this.drinksRepo.findById(id).orElse(null);
+        return this.drinksRepo.findById(id).orElseThrow(() -> new IllegalStateException("Drink not found"));
     }
 
     @Override
