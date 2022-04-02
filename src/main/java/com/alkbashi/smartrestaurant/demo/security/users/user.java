@@ -14,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.stream.Collectors;
 
 @Document
 @Data
@@ -21,7 +22,7 @@ import java.util.Collections;
 public class user implements UserDetails
 {
     public user(String username, String email, String password
-            , usersRole usersRoles)
+            , Collection<String> usersRoles)
     {
         this.username = username;
         this.email = email;
@@ -44,7 +45,7 @@ public class user implements UserDetails
     private String username;
     private String email;
     private String password;
-    private usersRole usersRoles;
+    private Collection<String> usersRoles;
     private LocalDateTime enabledAt;
     private boolean locked = false;
     private boolean enabled = false;
@@ -52,7 +53,8 @@ public class user implements UserDetails
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities()
     {
-        return Collections.singletonList(new SimpleGrantedAuthority(this.usersRoles.name()));
+        return this.usersRoles.stream().distinct().map(String::toUpperCase).map(s -> new SimpleGrantedAuthority(s))
+                .collect(Collectors.toList());
     }
 
     @Override

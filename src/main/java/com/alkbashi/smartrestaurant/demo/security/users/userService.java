@@ -2,10 +2,13 @@ package com.alkbashi.smartrestaurant.demo.security.users;
 
 import com.alkbashi.smartrestaurant.demo.security.PasswordEncodingClass;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -14,9 +17,14 @@ import java.util.Optional;
 @AllArgsConstructor
 public class userService implements UserDetailsService
 {
+    @Autowired
     private final userRepo userRepo;
+
+    @Autowired
     private final PasswordEncodingClass passwordEncodingClass;
 
+
+    @Transactional(readOnly = true)
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
     {
@@ -28,7 +36,13 @@ public class userService implements UserDetailsService
 
         if(user.isEmpty())
             throw new IllegalStateException("USER NOT FOUND");
-        return user.get();
+        //return user.get();
+
+        System.out.println("THE PASSWORD WHEN FETCHED : " +user.get().getPassword());
+
+        return new User(user.get().getUsername(),user.get().getPassword(),
+                user.get().isEnabled(),user.get().isAccountNonExpired(),user.get().isCredentialsNonExpired()
+                ,user.get().isAccountNonLocked(),user.get().getAuthorities());
     }
 
     public void addUser(user user)
@@ -36,7 +50,10 @@ public class userService implements UserDetailsService
         if(check(user))
             throw new IllegalStateException("user duplicate exception");
 
-        user.setPassword(passwordEncodingClass.passwordEncoder().encode(user.getPassword()));
+        String str = passwordEncodingClass.encoder().encode(user.getPassword());
+        System.out.println("FOR USER "+user.getUsername()+
+                "THE PASSWORD WHEN ENCODED : "+str);
+        user.setPassword(str);
 
         this.userRepo.save(user);
     }
@@ -55,6 +72,6 @@ public class userService implements UserDetailsService
         user.setEnabled(true);
         user.setEnabledAt(LocalDateTime.now());
         
-        this.addUser(user);
+        this.userRepo.save(user);
     }
 }

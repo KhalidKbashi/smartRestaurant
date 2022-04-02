@@ -46,10 +46,18 @@ public class customerController
     }
 
     //GET-ALL
-    @GetMapping(path = "/test")
+    @GetMapping(path = "/success")
     @ResponseStatus(code = HttpStatus.OK)
-    public String test()
+    public String testSuccess()
     {
         return "SUCCESS";
+    }
+
+    //GET-ALL
+    @GetMapping(path = "/fail")
+    @ResponseStatus(code = HttpStatus.OK)
+    public String testFailed()
+    {
+        return "FAILED";
     }
 }
