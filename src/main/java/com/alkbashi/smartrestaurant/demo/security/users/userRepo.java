@@ -1,6 +1,5 @@
 package com.alkbashi.smartrestaurant.demo.security.users;
 
-import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

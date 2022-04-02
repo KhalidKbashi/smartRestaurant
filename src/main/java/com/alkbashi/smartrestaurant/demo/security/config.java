@@ -2,7 +2,6 @@ package com.alkbashi.smartrestaurant.demo.security;
 
 import com.alkbashi.smartrestaurant.demo.security.users.userService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -16,10 +15,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @AllArgsConstructor
 public class config extends WebSecurityConfigurerAdapter
 {
-    @Autowired
     private final userService userService;
-
-    @Autowired
     private final PasswordEncodingClass passwordEncodingClass;
 
     @Override
@@ -37,7 +33,7 @@ public class config extends WebSecurityConfigurerAdapter
 
                 .anyRequest().authenticated().and()
 
-                .formLogin().successForwardUrl("/customer/success").failureForwardUrl("/customer/fail");
+                .formLogin().and().httpBasic();
     }
 
 

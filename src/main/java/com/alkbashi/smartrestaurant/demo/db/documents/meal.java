@@ -4,7 +4,6 @@ import com.alkbashi.smartrestaurant.demo.db.documents.interfaces.addOns;
 import com.alkbashi.smartrestaurant.demo.db.documents.interfaces.elements;
 import com.alkbashi.smartrestaurant.demo.global.enums.elementType;
 import lombok.Data;
-import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

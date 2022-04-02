@@ -7,7 +7,6 @@ import com.alkbashi.smartrestaurant.demo.services.mealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -45,19 +44,4 @@ public class customerController
         return this.mealAssembler.toCollectionModel(meals);
     }
 
-    //GET-ALL
-    @GetMapping(path = "/success")
-    @ResponseStatus(code = HttpStatus.OK)
-    public String testSuccess()
-    {
-        return "SUCCESS";
-    }
-
-    //GET-ALL
-    @GetMapping(path = "/fail")
-    @ResponseStatus(code = HttpStatus.OK)
-    public String testFailed()
-    {
-        return "FAILED";
-    }
 }

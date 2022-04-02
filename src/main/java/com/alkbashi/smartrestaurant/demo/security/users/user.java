@@ -1,8 +1,7 @@
 package com.alkbashi.smartrestaurant.demo.security.users;
 
 import com.alkbashi.smartrestaurant.demo.security.registrationModel.registrationDTO;
-import com.alkbashi.smartrestaurant.demo.security.roles.usersRole;
-import lombok.Builder;
+import com.alkbashi.smartrestaurant.demo.security.roles.userRoles;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -13,7 +12,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.stream.Collectors;
 
 @Document
@@ -22,18 +20,18 @@ import java.util.stream.Collectors;
 public class user implements UserDetails
 {
     public user(String username, String email, String password
-            , Collection<String> usersRoles)
+            , Collection<userRoles> userRoles)
     {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.usersRoles = usersRoles;
+        this.userRoles = userRoles;
     }
 
     public user(registrationDTO registrationDTO)
     {
-        this.username = registrationDTO.getFirstName()+" "+registrationDTO.getLastName();
-        this.email = registrationDTO.getEmail();
+        this.username = (registrationDTO.getFirstName()+" "+registrationDTO.getLastName()).toLowerCase();
+        this.email = registrationDTO.getEmail().toLowerCase();
         this.password = registrationDTO.getPassword();
         //this.usersRoles = registrationDTO.??;
     }
@@ -45,7 +43,7 @@ public class user implements UserDetails
     private String username;
     private String email;
     private String password;
-    private Collection<String> usersRoles;
+    private Collection<userRoles> userRoles;
     private LocalDateTime enabledAt;
     private boolean locked = false;
     private boolean enabled = false;
@@ -53,7 +51,7 @@ public class user implements UserDetails
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities()
     {
-        return this.usersRoles.stream().distinct().map(String::toUpperCase).map(s -> new SimpleGrantedAuthority(s))
+        return this.userRoles.stream().distinct().map(s -> new SimpleGrantedAuthority(s.name()))
                 .collect(Collectors.toList());
     }
 

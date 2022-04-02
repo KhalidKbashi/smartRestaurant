@@ -2,15 +2,14 @@ package com.alkbashi.smartrestaurant.demo.security.registrationModel;
 
 import com.alkbashi.smartrestaurant.demo.security.registrationModel.token.Tokens;
 import com.alkbashi.smartrestaurant.demo.security.registrationModel.token.TokensService;
+import com.alkbashi.smartrestaurant.demo.security.roles.userRoles;
 import com.alkbashi.smartrestaurant.demo.security.users.user;
 import com.alkbashi.smartrestaurant.demo.security.users.userService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -23,7 +22,7 @@ public class registrationService
     {
         user user = new user(registrationDTO);
 
-        user.setUsersRoles(List.of("USER"));
+        user.setUserRoles(List.of(userRoles.USER));
 
         this.userService.addUser(user);
 

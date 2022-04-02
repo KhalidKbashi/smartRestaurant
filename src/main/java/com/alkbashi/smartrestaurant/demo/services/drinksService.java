@@ -1,9 +1,7 @@
 package com.alkbashi.smartrestaurant.demo.services;
 
 import com.alkbashi.smartrestaurant.demo.db.documents.drinks;
-import com.alkbashi.smartrestaurant.demo.db.documents.meal;
 import com.alkbashi.smartrestaurant.demo.db.repos.drinksRepo;
-import com.alkbashi.smartrestaurant.demo.db.repos.mealsRepo;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
