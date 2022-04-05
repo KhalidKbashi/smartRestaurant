@@ -1,9 +1,6 @@
 package com.alkbashi.smartrestaurant.demo.controllers;
 
-import com.alkbashi.smartrestaurant.demo.db.documents.drinkAddOns;
-import com.alkbashi.smartrestaurant.demo.db.documents.drinks;
-import com.alkbashi.smartrestaurant.demo.db.documents.meal;
-import com.alkbashi.smartrestaurant.demo.db.documents.mealAddOn;
+import com.alkbashi.smartrestaurant.demo.db.documents.*;
 import com.alkbashi.smartrestaurant.demo.services.DrinkAddOnsService;
 import com.alkbashi.smartrestaurant.demo.services.drinksService;
 import com.alkbashi.smartrestaurant.demo.services.mealAddOnsService;
@@ -17,7 +14,7 @@ import java.util.Objects;
 @RestController
 @RequestMapping(path = "/store/elements/")
 @AllArgsConstructor
-public class ElementsEndpointController
+public class ElementsPageEndpointController
 {
     private final mealService mealService;
     private final drinksService drinksService;

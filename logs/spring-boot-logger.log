@@ -1,0 +1,137 @@
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٨,١٩٦ INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.2.Final
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٨,١٩٦ INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting DemoApplication using Java 11.0.12 on Khalid-Kbashi-Laptop with PID 27160 (C:\Users\Techn\IdeaProjects\Smart Restaurant System\build\classes\java\main started by Techn in C:\Users\Techn\IdeaProjects\Smart Restaurant System)
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٨,٢٠٣ DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.4, Spring v5.3.16
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٨,٢١٠ INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٨,٢٨١ INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٨,٢٨٢ INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٨,٩٠٢ INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٨,٩٧٥ INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 68 ms. Found 7 MongoDB repository interfaces.
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٦٣٣ INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٦٤١ INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٦٤٢ INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٦٤٢ INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٧١٢ INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٧١٢ INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1429 ms
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٨٦٣ INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٩٢٧ INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='624c4b2d9f9d3a50c3e94363', description='null'}-localhost:27017] Opened connection [connectionId{localValue:2, serverValue:58}] to localhost:27017
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٩٢٧ INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-rtt-ClusterId{value='624c4b2d9f9d3a50c3e94363', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:57}] to localhost:27017
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٠٩,٩٢٩ INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='624c4b2d9f9d3a50c3e94363', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=20803800}
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٠,٠٥٧ INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٠,٤٩٤ INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٠,٧٩٤ INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٠,٨١١ INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٠,٨٢٠ INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started DemoApplication in 3.235 seconds (JVM running for 4.474)
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٥,٩٥٧ INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٥,٩٥٧ INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٥,٩٥٩ INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٦,٢٠١ INFO com.mongodb.diagnostics.logging.SLF4JLogger [http-nio-8080-exec-2] Opened connection [connectionId{localValue:3, serverValue:59}] to localhost:27017
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٦,٣٢٢ INFO com.alkbashi.smartrestaurant.demo.security.users.userService [http-nio-8080-exec-2] USER WITH USERNAME khalid kbashi CREATED
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:١٦,٣٧٧ INFO com.alkbashi.smartrestaurant.demo.security.registrationModel.registrationService [http-nio-8080-exec-2] REGISTERING USER khalid kbashi
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٢٢,٣٣٩ INFO com.alkbashi.smartrestaurant.demo.security.registrationModel.registrationService [http-nio-8080-exec-3] TOKEN : bea6b10f-f48a-47d6-9f15-1b9d1fae71c6 IS VALID
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٢٢,٣٥٣ INFO com.alkbashi.smartrestaurant.demo.security.users.userService [http-nio-8080-exec-3] USER khalid kbashi IS ENABLED
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٢٧,٤٧٥ INFO com.alkbashi.smartrestaurant.demo.security.users.userService [http-nio-8080-exec-4] FETCHED USER : khalid kbashi
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٢٧,٧٩٢ WARN org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [211] milliseconds.
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٢٧,٨١١ INFO org.springframework.data.mongodb.core.convert.QueryMapper$MetadataBackedField [http-nio-8080-exec-4] Could not map 'meal.id'. Maybe a fragment in 'String' is considered a simple type. Mapper continues with Id.
+٢٠٢٢-٠٤-٠٥ ١٥:٥٩:٢٧,٨٢٤ ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Meal not found] with root cause
+java.lang.IllegalStateException: Meal not found
+	at com.alkbashi.smartrestaurant.demo.services.mealService.lambda$get$0(mealService.java:28)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at com.alkbashi.smartrestaurant.demo.services.mealService.get(mealService.java:28)
+	at com.alkbashi.smartrestaurant.demo.controllers.ElementsPageEndpointController.getMealByIdRequest(ElementsPageEndpointController.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:219)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)

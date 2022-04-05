@@ -1,7 +1,7 @@
 package com.alkbashi.smartrestaurant.demo.HATEOAS.assamblers;
 
 import com.alkbashi.smartrestaurant.demo.HATEOAS.models.mealModel;
-import com.alkbashi.smartrestaurant.demo.controllers.ElementsEndpointController;
+import com.alkbashi.smartrestaurant.demo.controllers.ElementsPageEndpointController;
 import com.alkbashi.smartrestaurant.demo.db.documents.meal;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
@@ -12,7 +12,7 @@ public class mealAssembler extends RepresentationModelAssemblerSupport<meal, mea
 {
     public mealAssembler()
     {
-        super(ElementsEndpointController.class, mealModel.class);
+        super(ElementsPageEndpointController.class, mealModel.class);
     }
 
     /*@Override
@@ -26,7 +26,7 @@ public class mealAssembler extends RepresentationModelAssemblerSupport<meal, mea
     public mealModel toModel(meal entity)
     {
         return new mealModel(entity).add(WebMvcLinkBuilder
-                .linkTo(WebMvcLinkBuilder.methodOn(ElementsEndpointController.class)
+                .linkTo(WebMvcLinkBuilder.methodOn(ElementsPageEndpointController.class)
                         .getMealByIdRequest(entity.getId())).withSelfRel());
     }
 }
